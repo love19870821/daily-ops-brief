@@ -177,6 +177,7 @@ Includes:
 ## Example prompts / 範例提示詞
 
 ### English
+
 - Give me my morning brief.
 - Summarize today’s priorities from my inbox and calendar.
 - Make a manager update from these notes.
@@ -184,6 +185,7 @@ Includes:
 - Show me blockers, risks, and next actions.
 
 ### 繁體中文
+
 - 幫我整理今天的晨間簡報。
 - 幫我從信箱和行事曆整理今天重點。
 - 依照這些筆記幫我做主管回報版。
@@ -224,4 +226,4 @@ Place this skill folder in one of the following locations:
 
 ```bash
 <workspace>/skills/daily-ops-brief
-~/.openclaw/skills/daily-ops-brief****
+~/.openclaw/skills/daily-ops-brief
