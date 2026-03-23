@@ -5,7 +5,7 @@ Turn email, calendar, tasks, and pasted notes into a concise daily brief with pr
 Daily Ops Brief is a low-maintenance OpenClaw skill for people who want a clear start-of-day or manager-ready summary without risky automation.
 
 ## Why this skill exists
-
+ 
 Most daily information is scattered across inboxes, calendars, task lists, chat, and notes. This skill turns that noise into one practical brief you can act on immediately.
 
 It is designed to be:
