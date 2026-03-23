@@ -2,78 +2,76 @@
 
 Turn email, calendar, tasks, and pasted notes into a concise daily brief with priorities, blockers, and next actions.
 
-This skill is designed to be:
-- **low maintenance**
-- **read-only by default**
-- **useful even without custom plugins**
-- **good for chat-first workflows**
+Daily Ops Brief is a low-maintenance OpenClaw skill for people who want a clear start-of-day or manager-ready summary without risky automation.
 
-## Best use cases
+## Why this skill exists
 
-- morning brief
-- manager update
-- inbox + calendar summary
-- end-of-day wrap-up
-- concise chat-ready status post
+Most daily information is scattered across inboxes, calendars, task lists, chat, and notes. This skill turns that noise into one practical brief you can act on immediately.
 
-## What this skill does
+It is designed to be:
+- **Read-only by default**
+- **Fast to use**
+- **Useful even without custom plugins**
+- **Safe for chat-first workflows**
 
-The skill tells OpenClaw to:
+## Who this is for
+
+- operators
+- team leads
+- managers
+- founders
+- freelancers
+- anyone who starts the day by checking multiple sources
+
+## What it does
+
+Daily Ops Brief helps OpenClaw:
 1. gather signals from available sources,
-2. prioritize what matters,
-3. produce one compact brief in the user's language,
-4. avoid sending or editing anything unless explicitly asked.
+2. identify what matters most,
+3. group priorities, blockers, and follow-ups,
+4. output one compact brief in the user's language.
 
-## Why this design
+By default, it **does not** send messages, reply to email, delete items, edit calendars, or modify files.
 
-This version avoids high-maintenance logic and risky automation.
-It works with:
-- installed mail/calendar/task tools,
-- pasted text,
-- uploaded files,
-- chat context.
+## Supported input sources
 
-That makes it easier to publish, easier to adopt, and easier to keep stable.
+This skill works with whichever source is available:
+- installed mail, calendar, task, or document tools
+- pasted text
+- uploaded files
+- chat context
 
-## Included output modes
+If one source is missing, it should continue with the others instead of failing.
 
-### Morning Brief
-Default start-of-day summary with top priorities, schedule snapshot, blockers, and next actions.
+## Output modes
 
-### Manager Update
-Forwardable summary with status, risks, decisions needed, and next steps.
+### 1. Morning Brief
+Best for start-of-day planning.
 
-### Chat Brief
-A short bullet digest that can be pasted into Telegram, Discord, WhatsApp, or similar tools.
+Includes:
+- top 3 priorities
+- schedule snapshot
+- items needing attention
+- blockers or risks
+- suggested next actions
 
-## Install locally
+### 2. Manager Update
+Best for forwarding upward.
 
-Place this folder in one of these locations:
-- `<workspace>/skills/daily-ops-brief`
-- `~/.openclaw/skills/daily-ops-brief`
+Includes:
+- overall status
+- on-track items
+- blockers and risks
+- decisions needed
+- next actions
 
-Then start a new OpenClaw session and verify with:
+### 3. Chat Brief
+Best for Telegram, Discord, WhatsApp, or team chat.
 
-```bash
-openclaw skills list
-```
-
-## Suggested publish metadata
-
-- **slug**: `daily-ops-brief`
-- **name**: `Daily Ops Brief`
-- **tags**: `daily-brief,productivity,ops,summary,workflow`
-
-## Publish example
-
-```bash
-clawhub publish ./daily-ops-brief \
-  --slug daily-ops-brief \
-  --name "Daily Ops Brief" \
-  --version 0.1.0 \
-  --changelog "Initial public release" \
-  --tags daily-brief,productivity,ops,summary,workflow
-```
+Includes:
+- short bullet digest
+- one-line risk summary
+- one-line next-step summary
 
 ## Example prompts
 
@@ -82,10 +80,28 @@ clawhub publish ./daily-ops-brief \
 - Make a manager update from these notes.
 - Turn this todo list into a short operations brief.
 - 幫我整理今天重點。
+- 給我晨間簡報。
 - 幫我做主管版日報。
-- 幫我把這些待辦整理成晨間簡報。
+- 今天有哪些要先處理？
 
-## Recommended next step before publishing
+## Why it is low-maintenance
 
-Edit the skill description, README, and optional homepage to point to your own GitHub repo or profile.
-That gives you a public landing page for stars, issues, updates, and optional sponsor links.
+This version intentionally avoids high-risk automation.
+
+It focuses on:
+- reading
+- summarizing
+- prioritizing
+- formatting
+
+That makes it easier to adopt, easier to keep stable, and easier to trust.
+
+## Installation
+
+### Local skill folder
+
+Place this folder in one of these locations:
+
+```bash
+<workspace>/skills/daily-ops-brief
+~/.openclaw/skills/daily-ops-brief
